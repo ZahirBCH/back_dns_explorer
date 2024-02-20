@@ -1,0 +1,4 @@
+dnspython
+Flask
+flask-restful
+flask-cors
