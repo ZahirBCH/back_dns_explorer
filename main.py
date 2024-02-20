@@ -16,4 +16,4 @@ class DNSExplorerResource(Resource):
 api.add_resource(DNSExplorerResource, '/dns-explorer')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host ='0.0.0.0')
