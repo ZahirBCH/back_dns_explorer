@@ -23,10 +23,10 @@ jobs:
     - name: Build and push Docker image
       run: |
         # Build the Docker image
-        docker build -t gcr.io/PROJECT-ID/IMAGE:TAG .
+        docker build -t europe-west9-docker.pkg.dev/my-lab-production-415107/my-lab-artifact-registry/dns-explorer:1.0.0 .
         
         # Push the Docker image to GCR
-        docker push gcr.io/PROJECT-ID/IMAGE:TAG
+        docker push europe-west9-docker.pkg.dev/my-lab-production-415107/my-lab-artifact-registry/dns-explorer:1.0.0
 
     - name: Logout from Docker registry
       run: docker logout
