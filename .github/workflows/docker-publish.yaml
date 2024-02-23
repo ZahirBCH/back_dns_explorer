@@ -3,7 +3,7 @@ name: Push Docker Image to GCR
 on:
   push:
     branches:
-      - '*'
+      - main
 
 jobs:
   push_to_gcr:
@@ -28,10 +28,10 @@ jobs:
     - name: Build and push Docker image
       run: |
         # Build the Docker image
-        docker build -t europe-west9-docker.pkg.dev/my-lab-production-415107/my-lab-artifact-registry/dns-explorer:1.0.0 .
+        docker build -t europe-west9-docker.pkg.dev/my-lab-production-415213/my-lab-artifact-registry/dns-explorer:1.0.0 .
         
         # Push the Docker image to GCR
-        docker push europe-west9-docker.pkg.dev/my-lab-production-415107/my-lab-artifact-registry/dns-explorer:1.0.0
+        docker push europe-west9-docker.pkg.dev/my-lab-production-415213/my-lab-artifact-registry/dns-explorer:1.0.0
 
     - name: Logout from Docker registry
       run: docker logout
